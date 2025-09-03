@@ -1,21 +1,21 @@
 import { defineChain } from "viem";
 
 // TODO: Add Chain details here.
-export const rootstockTestnet = defineChain({
-  id: 31,
-  name: "Rootstock Testnet",
-  nativeCurrency: { name: "Rootstock", symbol: "tRBTC", decimals: 18 },
+export const flowTestnet = defineChain({
+  id: 545,
+  name: "Flow Testnet",
+  nativeCurrency: { name: "Flow", symbol: "FLOW", decimals: 18 },
   rpcUrls: {
     default: {
       // TODO: Add Rootstock RPC URL
-      http: [process.env.NEXT_PUBLIC_ROOTSTOCK_RPC_URL || "https://rpc.testnet.rootstock.io"],
+      http: [process.env.NEXT_PUBLIC_FLOW_RPC_URL || "https://testnet.evm.nodes.onflow.org"],
     },
   },
   blockExplorers: {
     default: {
-      name: "Rootstock Testnet Explorer",
+      name: "Flow Testnet Explorer",
       // TODO: Add Explorer URL
-      url: "https://explorer.testnet.rootstock.io",
+      url: "https://evm-testnet.flowscan.io/",
     },
   },
 });

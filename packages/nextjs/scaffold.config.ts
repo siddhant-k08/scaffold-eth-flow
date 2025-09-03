@@ -1,4 +1,4 @@
-import { rootstockTestnet } from "./utils/customChains";
+import { flowTestnet } from "./utils/customChains";
 import * as chains from "viem/chains";
 
 export type ScaffoldConfig = {
@@ -11,7 +11,7 @@ export type ScaffoldConfig = {
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [rootstockTestnet],
+  targetNetworks: [flowTestnet],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)

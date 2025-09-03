@@ -38,7 +38,7 @@ const config: HardhatUserConfig = {
       },
     ],
   },
-  defaultNetwork: "rootstockTestnet",
+  defaultNetwork: "flowTestnet",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -54,10 +54,9 @@ const config: HardhatUserConfig = {
         enabled: process.env.MAINNET_FORKING_ENABLED === "true",
       },
     },
-    rootstockTestnet: {
-      url: rootstockRpcUrl,
+    flowTestnet: {
+      url: 'https://testnet.evm.nodes.onflow.org',
       accounts: [deployerPrivateKey],
-      chainId: 31,
     },
   },
   // configuration for harhdat-verify plugin
@@ -66,8 +65,8 @@ const config: HardhatUserConfig = {
   },
   sourcify: {
     enabled: true,
-    apiUrl: "https://sourcify-api.rootstock.io",
-    browserUrl: "https://explorer.testnet.rootstock.io",
+    apiUrl: 'https://evm-testnet.flowscan.io/api',
+    browserUrl: 'https://evm-testnet.flowscan.io/',
   },
 };
 
