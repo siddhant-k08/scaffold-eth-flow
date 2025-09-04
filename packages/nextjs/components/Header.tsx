@@ -39,8 +39,8 @@ export const HeaderMenuLinks = () => {
               href={href}
               passHref
               className={`${
-                isActive ? "bg-flow-green-dark shadow-md text-flow-white" : "text-flow-black"
-              } hover:bg-flow-green-dark hover:shadow-md hover:text-flow-white focus:!bg-flow-green-dark active:!text-flow-white py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col transition-colors`}
+                isActive ? "bg-flow-white shadow-md text-flow-black" : "text-flow-black"
+              } hover:bg-flow-white hover:shadow-md hover:text-flow-black focus:!bg-flow-white focus:!text-flow-black active:!text-flow-black py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col transition-colors`}
             >
               {icon}
               <span>{label}</span>
@@ -69,7 +69,7 @@ export const Header = () => {
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
             tabIndex={0}
-            className={`ml-1 btn btn-ghost text-flow-black ${isDrawerOpen ? "hover:bg-flow-green-dark hover:text-flow-white" : "hover:bg-flow-green-dark hover:text-flow-white"}`}
+            className={`ml-1 btn btn-ghost text-flow-black ${isDrawerOpen ? "hover:bg-flow-white hover:text-flow-black" : "hover:bg-flow-white hover:text-flow-black"}`}
             onClick={() => {
               setIsDrawerOpen(prevIsOpenState => !prevIsOpenState);
             }}
