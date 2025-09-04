@@ -52,7 +52,7 @@ export const Footer = () => {
             <div className="text-center">
               {/* TODO: add the scaffold-eth-flow repo link */}
               <a
-                href="https://github.com/scaffold-eth/se-2"
+                href="https://github.com/siddhant-k08/scaffold-eth-flow"
                 target="_blank"
                 rel="noreferrer"
                 className="link text-accent-blue-normal hover:text-accent-blue-dark font-medium"
