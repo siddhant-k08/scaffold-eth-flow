@@ -39,8 +39,8 @@ export const HeaderMenuLinks = () => {
               href={href}
               passHref
               className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+                isActive ? "bg-flow-green-dark shadow-md text-flow-white" : "text-flow-black"
+              } hover:bg-flow-green-dark hover:shadow-md hover:text-flow-white focus:!bg-flow-green-dark active:!text-flow-white py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col transition-colors`}
             >
               {icon}
               <span>{label}</span>
@@ -64,12 +64,12 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-200 min-h-0 flex-shrink-0 justify-between z-20 border-b-2 border-base-100 px-0 sm:px-2 py-4">
+    <div className="sticky lg:static top-0 navbar bg-flow-green min-h-0 flex-shrink-0 justify-between z-20 border-b-2 border-flow-green-dark px-0 sm:px-2 py-4">
       <div className="navbar-start w-auto lg:w-1/2">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
             tabIndex={0}
-            className={`ml-1 btn btn-ghost ${isDrawerOpen ? "hover:bg-secondary" : "hover:bg-transparent"}`}
+            className={`ml-1 btn btn-ghost text-flow-black ${isDrawerOpen ? "hover:bg-flow-green-dark hover:text-flow-white" : "hover:bg-flow-green-dark hover:text-flow-white"}`}
             onClick={() => {
               setIsDrawerOpen(prevIsOpenState => !prevIsOpenState);
             }}
@@ -79,7 +79,7 @@ export const Header = () => {
           {isDrawerOpen && (
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-flow-white rounded-box w-52"
               onClick={() => {
                 setIsDrawerOpen(false);
               }}
@@ -93,8 +93,8 @@ export const Header = () => {
             <Image alt="SE2 logo" className="cursor-pointer" fill src="/flow.png" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-ETH-Flow</span>
-            <span className="text-xs">Ethereum dev stack</span>
+            <span className="font-bold leading-tight text-flow-black">Scaffold-ETH-Flow</span>
+            <span className="text-xs text-flow-black">Ethereum dev stack</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">

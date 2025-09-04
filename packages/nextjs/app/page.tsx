@@ -39,9 +39,9 @@ const Home: NextPage = () => {
           </p>
         </div>
 
-        <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
+        <div className="flex-grow bg-flow-green w-full mt-16 px-8 py-12">
           <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
-            <div className="flex flex-col bg-base-200 border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+            <div className="flex flex-col bg-flow-white border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <BoltIcon className="h-8 w-8" />
               <p>
                 Get testnet funds from the{" "}
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </p>
             </div>
-            <div className="flex flex-col bg-base-200 border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+            <div className="flex flex-col bg-flow-white border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <BugAntIcon className="h-8 w-8" />
               <p>
                 Tinker with your smart contract using the{" "}
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                 tab.
               </p>
             </div>
-            <div className="flex flex-col bg-base-200 border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+            <div className="flex flex-col bg-flow-white border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <MagnifyingGlassIcon className="h-8 w-8" />
               <p>
                 Explore your transactions with the{" "}
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
                 tab.
               </p>
             </div>
-            <div className="flex flex-col bg-base-200 border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+            <div className="flex flex-col bg-flow-white border-base-100 border-2 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <BookOpenIcon className="h-8 w-8" />
               <p>
                 Learn more about{" "}
