@@ -1,4 +1,4 @@
-import { rootstockTestnet } from "../customChains";
+import { flowTestnet } from "../customChains";
 import * as chains from "viem/chains";
 import scaffoldConfig from "~~/scaffold.config";
 
@@ -14,7 +14,7 @@ export type ChainWithAttributes = chains.Chain & Partial<ChainAttributes>;
 
 // Mapping of chainId to RPC chain name an format followed by alchemy and infura
 export const RPC_CHAIN_NAMES: Record<number, string> = {
-  [rootstockTestnet.id]: "rootstock-testnet",
+  [flowTestnet.id]: "flow-testnet",
 };
 
 export const getAlchemyHttpUrl = (chainId: number) => {
@@ -24,8 +24,8 @@ export const getAlchemyHttpUrl = (chainId: number) => {
 };
 
 export const NETWORKS_EXTRA_DATA: Record<string, ChainAttributes> = {
-  [rootstockTestnet.id]: {
-    color: "#FF9100",
+  [flowTestnet.id]: {
+    color: "#00EF8B",
   },
 };
 

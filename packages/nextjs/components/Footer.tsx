@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { RootstockLogo } from "./assets/RootstockLogo";
+import { FlowLogo } from "./assets/FlowLogo";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/outline";
@@ -18,13 +18,13 @@ export const Footer = () => {
   const isLocalNetwork = targetNetwork.id === hardhat.id;
 
   return (
-    <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">
+    <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0 bg-base-100">
       <div>
         <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
           <div className="flex flex-col md:flex-row gap-2 pointer-events-auto">
             {nativeCurrencyPrice > 0 && (
               <div>
-                <div className="btn btn-primary btn-sm font-normal gap-1 cursor-auto">
+                <div className="btn btn-primary btn-sm font-epilogue font-medium gap-1 cursor-auto bg-flow-green text-flow-black hover:bg-flow-green-dark">
                   <CurrencyDollarIcon className="h-4 w-4" />
                   <span>{nativeCurrencyPrice.toFixed(2)}</span>
                 </div>
@@ -33,7 +33,11 @@ export const Footer = () => {
             {isLocalNetwork && (
               <>
                 <Faucet />
-                <Link href="/blockexplorer" passHref className="btn btn-primary btn-sm font-normal gap-1">
+                <Link
+                  href="/blockexplorer"
+                  passHref
+                  className="btn btn-primary btn-sm font-epilogue font-medium gap-1 bg-flow-green text-flow-black hover:bg-flow-green-dark"
+                >
                   <MagnifyingGlassIcon className="h-4 w-4" />
                   <span>Block Explorer</span>
                 </Link>
@@ -44,41 +48,51 @@ export const Footer = () => {
       </div>
       <div className="w-full">
         <ul className="menu menu-horizontal w-full">
-          <div className="flex justify-center items-center gap-2 text-sm w-full">
+          <div className="flex justify-center items-center gap-2 text-sm w-full font-epilogue">
             <div className="text-center">
-              {/* TODO: add the scaffold-eth-rootstock repo link */}
-              <a href="https://github.com/scaffold-eth/se-2" target="_blank" rel="noreferrer" className="link">
+              {/* TODO: add the scaffold-eth-flow repo link */}
+              <a
+                href="https://github.com/scaffold-eth/se-2"
+                target="_blank"
+                rel="noreferrer"
+                className="link text-accent-blue-normal hover:text-accent-blue-dark font-medium"
+              >
                 Fork me
               </a>
             </div>
-            <span>·</span>
+            <span className="text-base-content">·</span>
             <div className="flex justify-center items-center gap-2">
-              <p className="m-0 text-center">
-                Built with <HeartIcon className="inline-block h-4 w-4" /> at
+              <p className="m-0 text-center text-base-content">
+                Built with <HeartIcon className="inline-block h-4 w-4 text-accent-pink-normal" /> at
               </p>
               <a
-                className="flex justify-center items-center gap-1"
+                className="flex justify-center items-center gap-1 hover:opacity-80 transition-opacity"
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <BuidlGuidlLogo className="w-3 h-5 pb-1" />
-                <span className="link">BuidlGuidl</span>
+                <span className="link text-accent-blue-normal hover:text-accent-blue-dark font-medium">BuidlGuidl</span>
               </a>
-              <p>and</p>
+              <p className="text-base-content">and</p>
               <a
-                className="flex justify-center items-center gap-1"
-                href="https://rootstock.io/"
+                className="flex justify-center items-center gap-1 hover:opacity-80 transition-opacity"
+                href="https://flow.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <RootstockLogo className="w-3 h-5 pb-1" />
-                <span className="link">Rootstock</span>
+                <FlowLogo className="w-3 h-5 pb-1" />
+                <span className="link text-flow-green hover:text-flow-green-dark font-medium">Flow</span>
               </a>
             </div>
-            <span>·</span>
+            <span className="text-base-content">·</span>
             <div className="text-center">
-              <a href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" rel="noreferrer" className="link">
+              <a
+                href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA"
+                target="_blank"
+                rel="noreferrer"
+                className="link text-accent-blue-normal hover:text-accent-blue-dark font-medium"
+              >
                 {/* TODO: Add link to github repo to create issue */}
                 Support
               </a>

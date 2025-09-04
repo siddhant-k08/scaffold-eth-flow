@@ -20,8 +20,8 @@ const deployerPrivateKey =
 // forking rpc url
 const forkingURL = process.env.FORKING_URL || "";
 
-// Rootstock RPC URL from environment variable
-const rootstockRpcUrl = process.env.ROOTSTOCK_RPC_URL || "https://rpc.testnet.rootstock.io";
+// Flow RPC URL from environment variable
+const flowRpcUrl = process.env.FLOW_RPC_URL || "https://testnet.evm.nodes.onflow.org";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -55,7 +55,7 @@ const config: HardhatUserConfig = {
       },
     },
     flowTestnet: {
-      url: 'https://testnet.evm.nodes.onflow.org',
+      url: flowRpcUrl,
       accounts: [deployerPrivateKey],
     },
   },
@@ -65,8 +65,8 @@ const config: HardhatUserConfig = {
   },
   sourcify: {
     enabled: true,
-    apiUrl: 'https://evm-testnet.flowscan.io/api',
-    browserUrl: 'https://evm-testnet.flowscan.io/',
+    apiUrl: "https://evm-testnet.flowscan.io/api",
+    browserUrl: "https://evm-testnet.flowscan.io/",
   },
 };
 

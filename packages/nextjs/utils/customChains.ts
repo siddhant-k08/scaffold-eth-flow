@@ -7,7 +7,7 @@ export const flowTestnet = defineChain({
   nativeCurrency: { name: "Flow", symbol: "FLOW", decimals: 18 },
   rpcUrls: {
     default: {
-      // TODO: Add Rootstock RPC URL
+      // TODO: Add Flow RPC URL
       http: [process.env.NEXT_PUBLIC_FLOW_RPC_URL || "https://testnet.evm.nodes.onflow.org"],
     },
   },
